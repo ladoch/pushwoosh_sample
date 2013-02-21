@@ -1,0 +1,20 @@
+@(success: Boolean)
+
+@main {
+    <div class="container">
+        <div class="row">
+            @if(success) {
+                <div class="alert alert-block alert-success">
+                    Push message sent successfully!
+                </div>
+            } else {
+                <div class="alert alert-block alert-error">
+                    <strong>Oops!</strong> Pushwoosh returned error!
+                </div>
+            }
+
+            <a href="/">Return back</a>
+
+        </div>
+    </div>
+}

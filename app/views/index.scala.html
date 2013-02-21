@@ -1,0 +1,18 @@
+@(form: Form[models.data.PushMessage])
+
+@import helper.twitterBootstrap._
+
+@main {
+    <div class="container">
+        <div class="row">
+            <legend>Send push notification</legend>
+            @helper.form(action = routes.Application.send()) {
+                @helper.textarea(form("content"), '_showConstraints -> false)
+
+                <input type="submit" class="btn btn-success">
+            }
+
+        </div>
+    </div>
+}
+
